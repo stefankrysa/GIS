@@ -7,7 +7,7 @@ output:
   pdf_document: default
 ---
 
-Calculating the change in global inequality per country from 2010 to 2019, according to the UN global inequality index:
+Calculating the change in gender inequality per country from 2010 to 2019, according to the UN gender inequality index:
 
 ```{r Data Processing, results=FALSE, message=FALSE, warning=FALSE}
 ##packages
@@ -47,11 +47,11 @@ tmap_mode("plot")
 tm_shape(gimap) +
   tm_polygons(
     col = "gidiff",         
-    palette = "RdBu",         
+    palette = "-RdBu",         
     title = "Change in GII"    
   ) +
   tm_layout(
-    main.title = "Global Inequality Index from 2010-2019",
+    main.title = "Gender Inequality Index from 2010-2019",
     main.title.position = "center",
     main.title.size = 1.5,
     legend.position = c("left", "bottom"),
